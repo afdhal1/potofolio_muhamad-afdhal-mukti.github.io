@@ -1,0 +1,170 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #0d0d0d;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 8%;
+}
+.logo {
+  font-size: 1.6em;
+  color: #d46a6a;
+  font-weight: 700;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: #d46a6a;
+  border-bottom: 2px solid #d46a6a;
+  padding-bottom: 3px;
+}
+
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5em 10%;
+  gap: 4em;
+  flex-wrap: wrap;
+}
+.hero-left { flex: 1; display: flex; justify-content: center; }
+.profile-circle {
+  width: 300px; height: 300px; border-radius: 50%;
+  background: radial-gradient(circle, #8f4444, #2a0000);
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.profile-circle img { width: 100%; border-radius: 20%; }
+
+.hero-right { flex: 1;
+  max-width: 700px;
+  text-align: left;       
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;}
+.hero-right h1 {
+   font-size: 2.8em;
+    font-weight: 00; }
+.hero-right h2 {
+   font-size: 1.8em; 
+   font-weight: 600; 
+   margin: 0.5em 0 1em; 
+  }
+.hero-right p { font-size: 1em; color: #ffffff; margin-bottom: 1.8em; text-align: justify; }
+
+
+
+.social-icons { display: flex; gap: 1em; margin-bottom: 1.5em; }
+.social-icons a {
+  color: #d46a6a; font-size: 1.4em; transition: 0.3s;
+}
+.social-icons a:hover { color: #fff; transform: scale(1.1); }
+.hire-btn, button {
+  background: transparent; border: 2px solid #d46a6a; color: #d46a6a;
+  padding: 0.8em 2.2em; border-radius: 30px; cursor: pointer;
+  font-weight: 600; transition: 0.3s;
+}
+.hire-btn:hover, button:hover { background: #d46a6a; color: #fff; }
+
+
+.about, .portfolio, .contact {
+  max-width: 900px;
+  margin: 3em auto;
+  padding: 2em;
+  background: #161616;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(212, 106, 106, 0.2);
+}
+.about h2, .portfolio h2, .contact h2 {
+  color: #d46a6a;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+
+.skills { text-align: center; padding: 2em 0; }
+.skills h2 { color: #d46a6a; margin-bottom: 1.5em; }
+.skills-container {
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 2em;
+}
+.skill { display: flex; flex-direction: column; align-items: center; gap: 0.6em; }
+.circle {
+  --size: 110px;
+  width: var(--size); height: var(--size); border-radius: 50%;
+  background: conic-gradient(var(--color) calc(var(--value)*1%), #222 0%);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 600; font-size: 1.1em; position: relative;
+}
+.circle::before {
+  content: ""; position: absolute;
+  width: calc(var(--size) - 15px); height: calc(var(--size) - 15px);
+  background: #0d0d0d; border-radius: 50%;
+}
+.circle span { position: relative; z-index: 1; }
+
+
+.portfolio table {
+  width: 100%; border-collapse: collapse; color: #ddd;
+}
+th, td {
+  padding: 14px; text-align: center; border-bottom: 1px solid #2a2a2a;
+}
+th { background: #d46a6a; color: #fff; }
+td a { color: #d46a6a; text-decoration: none; font-weight: 500; }
+td a:hover { text-decoration: underline; }
+.status {
+  padding: 4px 10px; border-radius: 20px; font-size: 0.9em;
+}
+.status.done { background: rgba(82,196,26,0.2); color: #52c41a; }
+.status.pending { background: rgba(250,173,20,0.2); color: #faad14; }
+
+
+.contact-form {
+  display: flex; flex-direction: column; gap: 1em;
+}
+.contact-form input, .contact-form select, .contact-form textarea {
+  padding: 12px; border-radius: 8px; border: 1px solid #333;
+  background: #0d0d0d; color: #fff; font-size: 1em; transition: 0.3s;
+}
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
+  border-color: #d46a6a;
+}
+
+
+footer {
+  text-align: center; padding: 1em; color: #888;
+  border-top: 1px solid #222; background: #0d0d0d;
+}
+footer a { color: #d46a6a; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+
+@media (max-width:900px) {
+  .hero { flex-direction: column; text-align: center; }
+  .hero-right { max-width: 100%; }
+}
+@media (max-width:768px) {
+  th, td { padding: 10px; font-size: 0.9em; }
+}
